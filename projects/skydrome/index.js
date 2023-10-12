@@ -1,12 +1,13 @@
-const ADDRESSES = require('../helper/coreAssets.json')
 const { getUniTVL } = require('../helper/unknownTokens')
 
 module.exports = {
   misrepresentedTokens: true,
-  polygon_zkevm: {
+  scroll: {
     tvl: getUniTVL({
-      factory: ADDRESSES.shibarium.BONE_1,
+      factory: '0x2516212168034b18a0155FfbE59f2f0063fFfBD9',
       useDefaultCoreAssets: true,
+      hasStablePools: true,
+      fetchBalances: true,
     })
   },
 }
